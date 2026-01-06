@@ -1,0 +1,29 @@
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bg { fill: #f8fafc }
+    .panel { fill: #fff; stroke: #e6eef8 }
+    .primary { fill: #0b74ff }
+    .label { font-family: Inter, Arial, sans-serif; font-size: 14px }
+    .title { font-family: Inter, Arial, sans-serif; font-weight: 600; font-size: 18px }
+  </style>
+  <rect class="bg" width="1200" height="800"/>
+  <rect x="40" y="24" width="1120" height="64" class="panel"/>
+  <text x="60" y="64" class="title">Dashboard do Profissional</text>
+
+  <rect x="40" y="110" width="320" height="220" class="panel"/>
+  <text x="60" y="150" class="label">Saldo disponível: R$ 1.250</text>
+  <text x="60" y="175" class="label">Saldo em análise (escrow): R$ 300</text>
+  <rect x="60" y="200" width="120" height="40" rx="6" fill="#10b981"/>
+  <text x="84" y="228" fill="#fff">Sacar</text>
+
+  <rect x="380" y="110" width="780" height="220" class="panel"/>
+  <text x="400" y="150" class="title">Próximos Agendamentos</text>
+  <rect x="400" y="180" width="720" height="40" rx="6" fill="#fff" stroke="#edf2ff"/>
+  <text x="420" y="206" class="label">Job • Cliente • Endereço • Horário • R$ 250 • Botões: Check-in / Upload Evidências</text>
+
+  <rect x="40" y="350" width="1120" height="380" class="panel"/>
+  <text x="60" y="390" class="title">Histórico e Finanças</text>
+  <text x="60" y="420" class="label">Extrato • Taxas aplicadas • Gráfico mensal</text>
+  <rect x="900" y="420" width="200" height="44" rx="6" fill="#0b74ff"/>
+  <text x="940" y="452" fill="#fff">Solicitar Saque</text>
+</svg>

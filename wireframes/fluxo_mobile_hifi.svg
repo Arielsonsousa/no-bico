@@ -1,0 +1,29 @@
+<svg width="420" height="900" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .bg { fill: #f6f7fb }
+    .card { fill: #ffffff; stroke: #e6e9ef }
+    .btn { fill: #0066ff }
+    .label { font-family: Inter, Arial, sans-serif; font-size: 14px }
+  </style>
+  <rect width="420" height="900" class="bg"/>
+  <rect x="12" y="12" width="396" height="56" class="card"/>
+  <text x="24" y="46" class="label">Buscar serviço • Localização</text>
+
+  <rect x="12" y="80" width="396" height="140" class="card"/>
+  <text x="24" y="110" class="label">Lista: Profissional • Selo • R$ 180</text>
+
+  <rect x="12" y="232" width="396" height="220" class="card"/>
+  <text x="24" y="264" class="label">Detalhe do Job / Proposta</text>
+  <rect x="48" y="316" width="320" height="44" rx="8" class="btn"/>
+  <text x="168" y="346" font-family="Inter" font-size="14" fill="#fff">Depositar em Garantia</text>
+
+  <rect x="12" y="460" width="396" height="160" class="card"/>
+  <text x="24" y="492" class="label">Checkout • Escrow: R$ 250 • Taxa 10%</text>
+  <rect x="48" y="520" width="320" height="44" rx="8" fill="#10b981"/>
+  <text x="168" y="550" font-family="Inter" font-size="14" fill="#fff">Confirmar & Depositar</text>
+
+  <rect x="12" y="640" width="396" height="200" class="card"/>
+  <text x="24" y="672" class="label">Execução • Enviar evidências (foto, assinatura)</text>
+  <rect x="48" y="760" width="320" height="44" rx="8" class="btn"/>
+  <text x="168" y="790" font-family="Inter" font-size="14" fill="#fff">Enviar Evidências</text>
+</svg>
