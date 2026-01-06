@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "name": "no-bico-preview",
+  "builds": [{ "src": "web/**/*", "use": "@vercel/static" }],
+  "routes": [
+    { "src": "^/docs/(.*)$", "dest": "/docs/$1" },
+    { "src": "^/wireframes/(.*)$", "dest": "/wireframes/$1" },
+    { "src": "^/$", "dest": "/web/index.html" }
+  ]
+}
