@@ -20,11 +20,14 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Install (if package.json exists)
+      - name: Install dependencies
         run: |
           if [ -f package.json ]; then npm ci; else echo "No package.json — skipping install"; fi
 
-      - name: Run tests (placeholder)
+      - name: Lint
         run: |
-          echo "No tests configured yet" 
-          echo "CI placeholder succeeded"
+          if [ -f package.json ]; then npm run lint; else echo "No package.json — skipping lint"; fi
+
+      - name: Test
+        run: |
+          if [ -f package.json ]; then npm test; else echo "No package.json — skipping tests"; fi
