@@ -22,7 +22,9 @@ jobs:
 
       - name: Install dependencies
         run: |
-          if [ -f package.json ]; then npm ci; else echo "No package.json — skipping install"; fi
+          if [ -f package-lock.json ]; then npm ci;
+          elif [ -f package.json ]; then npm install;
+          else echo "No package.json — skipping install"; fi
 
       - name: Lint
         run: |
