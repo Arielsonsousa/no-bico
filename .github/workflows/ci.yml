@@ -77,6 +77,10 @@ jobs:
           elif [ -f package.json ]; then npm install;
           else echo "No package.json — skipping install"; fi
 
+      - name: Install Playwright browsers
+        run: |
+          npx playwright install --with-deps
+
       - name: Run E2E tests (if any)
         run: |
           if [ -d e2e ]; then npm run e2e; else echo "No e2e tests found — skipping"; fi
