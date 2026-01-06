@@ -1,0 +1,26 @@
+name: Deploy to Vercel
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install Vercel CLI
+        run: npm install -g vercel
+      - name: Deploy to Vercel (Production)
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          vercel --token=${{ secrets.VERCEL_TOKEN }} --prod
+      - name: Deploy to Vercel (Preview)
+        if: github.event_name == 'pull_request'
+        run: |
+          vercel deploy --token=${{ secrets.VERCEL_TOKEN }}
+      - name: Create deployment status
+        if: always()
+        run: echo "Vercel deployment queued"
