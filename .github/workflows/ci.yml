@@ -7,10 +7,9 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
-    name: Build
+  lint:
+    name: Lint
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -26,10 +25,62 @@ jobs:
           elif [ -f package.json ]; then npm install;
           else echo "No package.json — skipping install"; fi
 
-      - name: Lint
+      - name: Lint (check)
         run: |
           if [ -f package.json ]; then npm run lint; else echo "No package.json — skipping lint"; fi
+
+      - name: Lint (autofix check)
+        run: |
+          if [ -f package.json ]; then npm run lint:fix; git diff --exit-code || (echo "Autofix made changes; run 'npm run lint:fix' and commit" && exit 1); else echo "No package.json — skipping lint:fix"; fi
+
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [18, 20]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js ${{ matrix.node }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Install dependencies
+        run: |
+          if [ -f package-lock.json ]; then npm ci;
+          elif [ -f package.json ]; then npm install;
+          else echo "No package.json — skipping install"; fi
 
       - name: Test
         run: |
           if [ -f package.json ]; then npm test; else echo "No package.json — skipping tests"; fi
+
+  e2e:
+    name: E2E
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main' || github.event_name == 'pull_request'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: |
+          if [ -f package-lock.json ]; then npm ci;
+          elif [ -f package.json ]; then npm install;
+          else echo "No package.json — skipping install"; fi
+
+      - name: Install Playwright browsers
+        run: |
+          npx playwright install --with-deps
+
+      - name: Run E2E tests (if any)
+        run: |
+          if [ -d e2e ]; then npm run e2e; else echo "No e2e tests found — skipping"; fi
