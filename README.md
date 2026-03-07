@@ -10,8 +10,9 @@ Entregáveis neste repositório:
 
 Próximos passos sugeridos:
 - Revisar docs e wireframes
-- Gerar protótipo clicável (Figma) ou wireframes de alta fidelidade
-- Definir PSP (Pagar.me / Asaas) e requisitos de KYC para MVP
-
+- Gerar protótipo clicável de alta fidelidade, ANDROID E CONERSÃO VIA API PARA IOS 
+- Definir PSP (CIELO) MATEUS IRÁ VERIFICAR
+- TAXA DE 7,99 DIARISTA 9,99 CONTRATANTE
+- VALIDAÇÃO DE VIDA COM SELFIE E DOCUMENTO ÚNICO. 
 ---
-Desenvolvedor: GitHub Copilot — Raptor mini (Preview)
+Desenvolvedores: MATEUS L. ARIELSON MATEUS F. FELIPE
