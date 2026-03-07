@@ -11,7 +11,11 @@ Entregáveis neste repositório:
 Próximos passos sugeridos:
 - Revisar docs e wireframes
 - Gerar protótipo clicável (Figma) ou wireframes de alta fidelidade
-- Definir PSP (Pagar.me / Asaas) e requisitos de KYC para MVP
+- Definir PSP ( MATEUS L IRÁ VERIFICAR A CIELO) PAGAMENTOS PARA 7,99 DIARISTA E 9,99 CONTRATANTE
+- PROVA DE VIDA SELFIE E ANEXO RÁPIDO DE DOCUMENTAÇÃO ÚNICA
+- QUALQUER ALTERAÇÃO PODE SER AVISA VIA GIT OU WHATSAPP NO GRUPO NO BICO
+- CADA USUÁRIO PODE ESCOLHER ATÉ TRÊS PROFISSIÕES
+- FASE 1 - 10 PROFISSÕES E UMA CIDA PILOTO ( RIO VERDE ) 1 A 3 MESES 
 
 ---
-Desenvolvedor: GitHub Copilot — Raptor mini (Preview)
+Desenvolvedores: MATEUS L. FELIPE. MATEUS F. ARIELSON
