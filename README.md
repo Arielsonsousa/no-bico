@@ -10,8 +10,12 @@ Entregáveis neste repositório:
 
 Próximos passos sugeridos:
 - Revisar docs e wireframes
-- Gerar protótipo clicável (Figma) ou wireframes de alta fidelidade
-- Definir PSP (Pagar.me / Asaas) e requisitos de KYC para MVP
+- Gerar protótipo clicável ou wireframes de alta fidelidade
+- Definir PSP para MVP
+- PREÇOS DEFINIDOS NA REUNIÃO 7,99 PARA REALIZADOR DO SERVIÇO E 9,99 PARA CONTRATANTE ( COLOCAR COMO MARKETING O PREÇO ANTES E O DE AGORA)
+- CONFIGURAR API PARA PAGAMENTOS VIA PLATAFORMA ( MATEUS IRÁ VERIFICAR A CIELO)
+- CONFIGURAR API PARA ESTADO DE VIDA, COM DOCUMENTO E SELFIE ( PODEMOS VER A AZURE PORÉM ELA SE MOSTROU MUITO INSTAVEL)
+  
 
 ---
-Desenvolvedor: GitHub Copilot — Raptor mini (Preview)
+MATEUS.L, FELIPE, MATEUS. ARIELSON
